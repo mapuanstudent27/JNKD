@@ -1,12 +1,10 @@
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JNKD Consumer Goods and Trading</title>
-    <link rel="stylesheet" href="./css/forms.css">
+    <link rel="stylesheet" href="../css/forms.css">
 </head>
-
 <body>
     <div class="container">
         <div class="form-box" id="login-form">
@@ -19,8 +17,6 @@
             </form>
         </div>
     </div>
-
-    <script src="script.js"></script>
+    <script src="../script.js"></script>
 </body>
-
 </html>
