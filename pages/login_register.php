@@ -1,13 +1,12 @@
 <?php
 session_start();
-require_once 'config.php';
+require_once __DIR__ . '/config.php';
 
-// logic for the sign up
 if (isset($_POST['register'])) {
     $username = $_POST['username']; 
     $email = $_POST['email'];
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-    $role = 'user'; // default to standard users 
+    $role = 'user';
 
     $check_email = $con->query("SELECT email FROM users WHERE email = '$email'");
     
@@ -20,7 +19,6 @@ if (isset($_POST['register'])) {
     exit();
 }
 
-// logic for the logins
 if (isset($_POST['login'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
@@ -35,9 +33,9 @@ if (isset($_POST['login'])) {
             $_SESSION['email'] = $user['email'];
             
             if ($user['role'] == 'admin') {
-                header("Location: admin_page.php");
+                header("Location: ../admin_page.php");
             } else {
-                header("Location: index.html");
+                header("Location: ../index.html");
             }
             exit();
         }
