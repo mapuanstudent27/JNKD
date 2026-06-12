@@ -8,13 +8,13 @@
 <body>
     <div class="container">
         <div class="form-box" id="registration-form">
-            <form action="">
+            <form action="login_register.php" method="POST">
                 <h2>Sign Up</h2>
                 <input type="username" name="username" placeholder="Username" required>
                 <input type="email" name="email" placeholder="Email" required>
                 <input type="password" name="password" placeholder="Password" required>
                 <button type="submit" name="register">Sign Up</button>
-                <p>Already have an account? <a href="login.html">Login</a></p>
+                <p>Already have an account? <a href="login.php">Login</a></p>
             </form>
         </div>
     </div>
